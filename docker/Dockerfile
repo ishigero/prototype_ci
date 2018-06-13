@@ -1,7 +1,5 @@
-# どのイメージを基にするか
 FROM ubuntu:16.04
-# 作成したユーザの情報
-MAINTAINER fp
+MAINTAINER guro
 ENV DEBCONF_NOWARNINGS yes
 RUN apt-get clean
 RUN rm -rf /var/lib/apt/lists/*
