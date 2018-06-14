@@ -51,6 +51,7 @@ jobs:
             if [ "${CIRCLE_BRANCH}" == "develop" ]; then
               login="$(aws ecr get-login --region ap-northeast-1)"
               ${login}
-              docker tag prototype-ci:"${CIRCLE_BRANCH}" "${ECR_ENDPOINT}/prototype-ci:${CIRCLE_BRANCH}"
+              docker tag prototype-ci:"${ECR_ENDPOINT}" "${ECR_ENDPOINT}/prototype-ci:${ECR_ENDPOINT}"
+              #docker tag prototype-ci:"${CIRCLE_BRANCH}" "${ECR_ENDPOINT}/prototype-ci:${CIRCLE_BRANCH}"
               docker push "${ECR_ENDPOINT}/prototype-ci:${CIRCLE_BRANCH}"
             fi
