@@ -43,7 +43,7 @@ jobs:
             - /caches/app.tar
       # - run:
       #     name: Run tests
-      #     command: | 
+      #     command: |
       #       docker-compose -f docker/docker-compose.test.yml up
       - deploy:
           name: Push application Docker image
