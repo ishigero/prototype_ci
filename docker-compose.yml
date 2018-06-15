@@ -1,0 +1,10 @@
+version: '2'
+
+services:
+  prototype-ci:
+    image: 327352062851.dkr.ecr.ap-northeast-1.amazonaws.com/prototype-ci:develop
+    # volumes:
+    #   - ./:/app
+    ports:
+      - "5010:5010"
+    command: python /app/main.py
