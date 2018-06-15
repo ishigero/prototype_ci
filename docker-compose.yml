@@ -6,5 +6,5 @@ services:
     # volumes:
     #   - ./:/app
     ports:
-      - "5010:5010"
+      - "5000:5000"
     command: python /app/main.py
